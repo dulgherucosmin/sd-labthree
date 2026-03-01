@@ -12,5 +12,20 @@ public class Rhombus extends Shape {
         this.diagonalOne = diagonalOne;
         this.diagonalTwo = diagonalTwo;
     }
+
+    @Override
+    public double perimeter() {
+        return 4 * sideLength;
+    }
+    
+    @Override
+    public double area() {
+        return diagonalOne * diagonalTwo * 0.5;
+    }
+
+    @Override
+    public String toString() {
+        return "Name: " + super.getName() + "\nSide Length: " + this.sideLength + " units\nDiagonals: " + diagonalOne + " and " + diagonalTwo + " units";
+    }
     
 }

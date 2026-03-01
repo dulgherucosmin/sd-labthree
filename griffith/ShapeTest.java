@@ -50,5 +50,41 @@ public class ShapeTest {
     public void CircleTestNull() {
         assertNotNull(new Circle(null, 1));
     }
+
+    @Test
+    public void RhombusTest() {
+
+        // create objects for testing
+        Rhombus rhom = new Rhombus("Rhombus 1", 1, 1, 1);
+        Rhombus rhom2 = new Rhombus("Rhombus 2", 20, 30, 40);
+        Rhombus rhom3 = new Rhombus("Rhombus 3", 0, 0, 0);
+
+        // perimeter tests
+        assertEquals(4, rhom.perimeter(), 0.1);
+        assertEquals(80, rhom2.perimeter(), 0.1);
+        assertEquals(0, rhom3.perimeter(), 0.1);
+
+        // area tests
+        assertEquals(0.5, rhom.area(), 0.1);
+        assertEquals(600, rhom2.area(), 0.1);
+        assertEquals(0, rhom3.area(), 0.1);
+
+        // toString tests
+        assertEquals("Name: Rhombus 1\nSide Length: 1.0 units\nDiagonals: 1.0 and 1.0 units", rhom.toString());
+        assertEquals("Name: Rhombus 2\nSide Length: 20.0 units\nDiagonals: 30.0 and 40.0 units", rhom2.toString());
+        assertEquals("Name: Rhombus 3\nSide Length: 0.0 units\nDiagonals: 0.0 and 0.0 units", rhom3.toString());
+    }
+
+    // test empty string
+    @Test(expected=IllegalArgumentException.class)
+    public void RhombusTestEmpty() {
+        assertNotNull(new Rhombus("", 1, 1, 1));
+    }
+
+    // test null
+    @Test(expected=IllegalArgumentException.class)
+    public void RhombusTestNull() {
+        assertNotNull(new Rhombus(null, 1, 1, 1));
+    }
     
 }
