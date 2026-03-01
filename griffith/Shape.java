@@ -7,8 +7,8 @@ public class Shape {
     public Shape(String name) {
         
         // data validation
-        if (name == null) {
-            throw new IllegalArgumentException("Shape Name cannot be null.");
+        if (name == null || name == "") {
+            throw new IllegalArgumentException("Shape Name cannot be null or an empty string.");
         }
 
         this.name = name;

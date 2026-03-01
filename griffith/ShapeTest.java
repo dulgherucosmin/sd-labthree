@@ -23,19 +23,19 @@ public class ShapeTest {
         Circle circ3 = new Circle("Circle 3", 0);
 
         // perimeter tests
-        assertEquals(12.6, circ.perimeter(), 0.1);
-        assertEquals(628.3, circ2.perimeter(), 0.1);
+        assertEquals(13, circ.perimeter(), 0.1);
+        assertEquals(628, circ2.perimeter(), 0.1);
         assertEquals(0, circ3.perimeter(), 0.1);
 
         // area tests
-        assertEquals(12.6, circ.area(), 0.1);
+        assertEquals(13, circ.area(), 0.1);
         assertEquals(31415.9, circ2.area(), 0.1);
         assertEquals(0, circ3.area(), 0.1);
 
         // toString tests
-        assertEquals("Name: Circle 1\nRadius: 2 units", circ.toString());
-        assertEquals("Name: Circle 2\nRadius: 100 units", circ2.toString());
-        assertEquals("Name: Circle 3\nRadius: 0 units", circ3.toString());
+        assertEquals("Name: Circle 1\nRadius: 2.0 units", circ.toString());
+        assertEquals("Name: Circle 2\nRadius: 100.0 units", circ2.toString());
+        assertEquals("Name: Circle 3\nRadius: 0.0 units", circ3.toString());
 
     }
 
