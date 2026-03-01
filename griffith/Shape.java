@@ -1,15 +1,5 @@
 // Dulgheru Cosmin Alexandru 3161052
 
-/*
-•	Create an abstract class Shape
-o	Add a private String name
-o	Add a constructor that sets name
-o	Add getters and setters.
-o	Add two abstract methods double area() and double perimeter()
-o	Add a toString method that prints name.
-
-*/
-
 public class Shape {
 
     private String name;
