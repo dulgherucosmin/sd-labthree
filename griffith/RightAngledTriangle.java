@@ -4,33 +4,33 @@ public class RightAngledTriangle extends Shape {
 
     private double base;
     private double height;
-    private double hyp;
-    private double adj;
 
-    public RightAngledTriangle(String name, double base, double height, double hyp, double adj) {
+    public RightAngledTriangle(String name, double base, double height) {
         super(name);
         this.base = base;
         this.height = height;
-        this.hyp = hyp;
-        this.adj = adj;
     }
     
     @Override
     public double perimeter() {
         
         // no values can be negative, test fails
-        if (base <= -1 || height <= -1 || hyp <= -1 || adj <= -1) {
+        if (base <= -1 || height <= -1) {
             return -1;
         }
 
-        return base + hyp + adj;
+        // a + b + sqrt(a^2+b^2)
+        // sqrt(a^2+b^2) gets c, the hypotenuse
+        double result = base + height + Math.sqrt((base * base) + (height * height));
+        // round to 2dp
+        return Math.round((result * 100) / 100);
     }
 
     @Override
     public double area() {
 
         // no values can be negative, test fails
-        if (base <= -1 || height <= -1 || hyp <= -1 || adj <= -1) {
+        if (base <= -1 || height <= -1) {
             return -1;
         }
 
@@ -39,7 +39,7 @@ public class RightAngledTriangle extends Shape {
 
     @Override
     public String toString() {
-        return "Name: " + super.getName() + "\nBase: " + base + " units\nHeight: " + height + " units\nHyp: " + hyp + " units\nAdj: " + adj + " units";
+        return "Name: " + super.getName() + "\nBase: " + base + " units\nHeight: " + height + " units";
     }
 
 }
