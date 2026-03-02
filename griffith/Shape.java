@@ -1,5 +1,11 @@
 // Dulgheru Cosmin Alexandru 3161052
 
+/* 
+Base class representing a generic geometric shape with a name and methods to
+compute perimeter and area. Subclasses override these methods with specific
+formulas.
+*/
+
 public class Shape {
 
     private String name;

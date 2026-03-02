@@ -1,5 +1,10 @@
 // Dulgheru Cosmin Alexandru 3161052
 
+/* 
+Unit tests for the individual shape subclasses verifying perimeter, area,
+and toString behaviour, along with invalid input handling. 
+*/
+
 import static org.junit.Assert.*;
 import org.junit.Test;
 

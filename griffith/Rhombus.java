@@ -1,5 +1,9 @@
 // Dulgheru Cosmin Alexandru 3161052
 
+/* 
+Represents a rhombus, overrides methods for calculating perimeter and area.
+*/ 
+
 public class Rhombus extends Shape {
 
     private double sideLength;

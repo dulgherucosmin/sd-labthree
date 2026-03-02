@@ -1,5 +1,10 @@
 // Dulgheru Cosmin Alexandu 3161052
 
+/* 
+Integration tests that exercise multiple shape instances stored in an
+ArrayList, checking overall behaviour of area and perimeter methods. 
+*/
+
 import static org.junit.Assert.*;
 import org.junit.Test;
 import java.util.ArrayList;

@@ -1,5 +1,9 @@
 // Dulgheru Cosmin Alexandru 3161052
 
+/* 
+Represents a circle, overrides methods for calculating perimeter and area.
+*/ 
+
 public class Circle extends Shape {
 
     private double radius;

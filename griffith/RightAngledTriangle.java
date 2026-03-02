@@ -1,5 +1,9 @@
 // Dulgheru Cosmin Alexandru 3161052
 
+/* 
+Represents a right-angled triangle, overrides methods for calculating perimeter and area.
+*/ 
+
 public class RightAngledTriangle extends Shape {
 
     private double base;
