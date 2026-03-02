@@ -13,7 +13,7 @@ public class Circle extends Shape {
     public double perimeter() {
 
         // radius cannot be negative, test fails
-        if (radius == -1) { return -1; }
+        if (radius <= -1) { return -1; }
 
         // round to 2 dp
         return Math.round(((2 * Math.PI * this.radius) * 100) / 100);
@@ -23,7 +23,7 @@ public class Circle extends Shape {
     public double area() {
         
         // radius cannot be negative, test fails
-        if (radius == -1) { return -1; }
+        if (radius <= -1) { return -1; }
 
         // round to 2 dp
         return Math.round(((Math.PI * this.radius * this.radius) * 100)/ 100);
