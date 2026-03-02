@@ -27,16 +27,28 @@ public class ShapeTest {
         Circle circ4 = new Circle("Circle 4", -1);
 
         // perimeter tests
-        assertEquals(13, circ.perimeter(), 0.1);
-        assertEquals(628, circ2.perimeter(), 0.1);
-        assertEquals(0, circ3.perimeter(), 0.1);
+        // C = 2 * PI * r
+        double expected1 = 2 * Math.PI * 2;
+        assertEquals(Math.round((expected1 * 100) / 100), circ.perimeter(), 0.1);
+
+        double expected2 = 2 * Math.PI * 100;
+        assertEquals(Math.round((expected2 * 100) / 100), circ2.perimeter(), 0.1);
+
+        double expected3 = 2 * Math.PI * 0;
+        assertEquals(Math.round((expected3 * 100) / 100), circ3.perimeter(), 0.1);
         // negative test fails: returns -1
         assertEquals(-1, circ4.perimeter(), 0.1);
 
         // area tests
-        assertEquals(13, circ.area(), 0.1);
-        assertEquals(31415.9, circ2.area(), 0.1);
-        assertEquals(0, circ3.area(), 0.1);
+        // A = PI r^2
+        double expected4 = Math.PI * 2 * 2;
+        assertEquals(Math.round((expected4 * 100) / 100), circ.area(), 0.1);
+
+        double expected5 = Math.PI * 100 * 100;
+        assertEquals(Math.round((expected5 * 100) / 100), circ2.area(), 0.1);
+
+        double expected6 = Math.PI * 0 * 0;
+        assertEquals(Math.round((expected6 * 100 / 100)), circ3.area(), 0.1);
         // negative test fails: returns -1
         assertEquals(-1, circ4.area(), 0.1);
 
@@ -70,6 +82,7 @@ public class ShapeTest {
         Rhombus rhom4 = new Rhombus("Rhombus 4", -1, -1, -1);
 
         // perimeter tests
+        // A = pi
         assertEquals(4, rhom.perimeter(), 0.1);
         assertEquals(80, rhom2.perimeter(), 0.1);
         assertEquals(0, rhom3.perimeter(), 0.1);
