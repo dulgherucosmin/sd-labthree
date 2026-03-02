@@ -126,16 +126,23 @@ public class ShapeTest {
         RightAngledTriangle tri4 = new RightAngledTriangle("Triangle 4", -1, -1);
 
         // perimeter tests
-        assertEquals(3, tri.perimeter(), 0.1);
-        assertEquals(26, tri2.perimeter(), 0.1);
-        assertEquals(0, tri3.perimeter(), 0.1);
+        // P = base + height + sqrt(base^2 + height^2)
+        double expected1 = 1 + 1 + Math.sqrt((1*1) + (1*1));
+        assertEquals(Math.round((expected1 * 100) / 100), tri.perimeter(), 0.1);
+
+        double expected2 = 10 + 5 + Math.sqrt((10*10) + (5*5));
+        assertEquals(Math.round((expected2 * 100) / 100), tri2.perimeter(), 0.1);
+
+        double expected3 = 0 + 0 + Math.sqrt((0*0) + (0*0)); 
+        assertEquals(Math.round((expected3 * 100) / 100), tri3.perimeter(), 0.1);
         // negative test fails: returns -1
         assertEquals(-1, tri4.perimeter(), 0.1);
 
         // area tests
-        assertEquals(0.5, tri.area(), 0.1);
-        assertEquals(25, tri2.area(), 0.1);
-        assertEquals(0, tri3.area(), 0.1);
+        // A = 0.5 * base * height
+        assertEquals(0.5 * 1 * 1, tri.area(), 0.1);
+        assertEquals(0.5 * 10 * 5, tri2.area(), 0.1);
+        assertEquals(0.5 * 0 * 0, tri3.area(), 0.1);
         // negative test fails: returns -1
         assertEquals(-1, tri4.area(), 0.1);
 
