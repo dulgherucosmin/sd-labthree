@@ -17,11 +17,23 @@ public class RightAngledTriangle extends Shape {
     
     @Override
     public double perimeter() {
+        
+        // no values can be negative, test fails
+        if (base <= -1 || height <= -1 || hyp <= -1 || adj <= -1) {
+            return -1;
+        }
+
         return base + hyp + adj;
     }
 
     @Override
     public double area() {
+
+        // no values can be negative, test fails
+        if (base <= -1 || height <= -1 || hyp <= -1 || adj <= -1) {
+            return -1;
+        }
+
         return 0.5 * base * height;
     }
 
