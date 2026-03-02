@@ -86,5 +86,42 @@ public class ShapeTest {
     public void RhombusTestNull() {
         assertNotNull(new Rhombus(null, 1, 1, 1));
     }
-    
+ 
+    @Test
+    public void RightAngledTriangleTest() {
+
+        // create objects for testing
+        RightAngledTriangle tri = new RightAngledTriangle("Triangle 1", 1, 1, 1, 1);
+        RightAngledTriangle tri2 = new RightAngledTriangle("Triangle 2", 10, 5, 15, 15);
+        RightAngledTriangle tri3 = new RightAngledTriangle("Triangle 3", 0, 0, 0, 0);
+
+        // perimeter tests
+        assertEquals(3, tri.perimeter(), 0.1);
+        assertEquals(40, tri2.perimeter(), 0.1);
+        assertEquals(0, tri3.perimeter(), 0.1);
+
+        // area tests
+        assertEquals(0.5, tri.area(), 0.1);
+        assertEquals(25, tri2.area(), 0.1);
+        assertEquals(0, tri3.area(), 0.1);
+
+        // toString tests
+        assertEquals("Name: Triangle 1\nBase: 0.0 units\nHeight: 0.0 units\nHyp: 0.0 units\nAdj: 0.0 units", tri.toString());
+        assertEquals("Name: Triangle 2\nBase: 0.0 units\nHeight: 0.0 units\nHyp: 0.0 units\nAdj: 0.0 units", tri2.toString());
+        assertEquals("Name: Triangle 3\nBase: 0.0 units\nHeight: 0.0 units\nHyp: 0.0 units\nAdj: 0.0 units", tri3.toString());
+
+    }
+
+    // test empty string
+    @Test(expected=IllegalArgumentException.class)
+    public void RightAngledTriangleTestEmpty() {
+        assertNotNull(new RightAngledTriangle("", 1, 1, 1,1));
+    }
+
+    // test null
+    @Test(expected=IllegalArgumentException.class)
+    public void RightAngledTriangleTestNull() {
+        assertNotNull(new RightAngledTriangle(null, 1, 1, 1, 1));
+    }
+
 }
