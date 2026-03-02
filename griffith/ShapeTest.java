@@ -21,16 +21,22 @@ public class ShapeTest {
         Circle circ = new Circle("Circle 1", 2);
         Circle circ2 = new Circle("Circle 2", 100);
         Circle circ3 = new Circle("Circle 3", 0);
+        // circle 4 strictly for negative test
+        Circle circ4 = new Circle("Circle 4", -1);
 
         // perimeter tests
         assertEquals(13, circ.perimeter(), 0.1);
         assertEquals(628, circ2.perimeter(), 0.1);
         assertEquals(0, circ3.perimeter(), 0.1);
+        // negative test fails: returns -1
+        assertEquals(-1, circ4.perimeter(), 0.1);
 
         // area tests
         assertEquals(13, circ.area(), 0.1);
         assertEquals(31415.9, circ2.area(), 0.1);
         assertEquals(0, circ3.area(), 0.1);
+        // negative test fails: returns -1
+        assertEquals(-1, circ4.area(), 0.1);
 
         // toString tests
         assertEquals("Name: Circle 1\nRadius: 2.0 units", circ.toString());
