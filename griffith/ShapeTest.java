@@ -106,8 +106,8 @@ public class ShapeTest {
         assertEquals(0, tri3.area(), 0.1);
 
         // toString tests
-        assertEquals("Name: Triangle 1\nBase: 0.0 units\nHeight: 0.0 units\nHyp: 0.0 units\nAdj: 0.0 units", tri.toString());
-        assertEquals("Name: Triangle 2\nBase: 0.0 units\nHeight: 0.0 units\nHyp: 0.0 units\nAdj: 0.0 units", tri2.toString());
+        assertEquals("Name: Triangle 1\nBase: 1.0 units\nHeight: 1.0 units\nHyp: 1.0 units\nAdj: 1.0 units", tri.toString());
+        assertEquals("Name: Triangle 2\nBase: 10.0 units\nHeight: 5.0 units\nHyp: 15.0 units\nAdj: 15.0 units", tri2.toString());
         assertEquals("Name: Triangle 3\nBase: 0.0 units\nHeight: 0.0 units\nHyp: 0.0 units\nAdj: 0.0 units", tri3.toString());
 
     }

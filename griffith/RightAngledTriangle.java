@@ -15,4 +15,19 @@ public class RightAngledTriangle extends Shape {
         this.adj = adj;
     }
     
+    @Override
+    public double perimeter() {
+        return base + hyp + adj;
+    }
+
+    @Override
+    public double area() {
+        return 0.5 * base * height;
+    }
+
+    @Override
+    public String toString() {
+        return "Name: " + super.getName() + "\nBase: " + base + " units\nHeight: " + height + " units\nHyp: " + hyp + " units\nAdj: " + adj + " units";
+    }
+
 }
