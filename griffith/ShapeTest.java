@@ -106,16 +106,22 @@ public class ShapeTest {
         RightAngledTriangle tri = new RightAngledTriangle("Triangle 1", 1, 1, 1, 1);
         RightAngledTriangle tri2 = new RightAngledTriangle("Triangle 2", 10, 5, 15, 15);
         RightAngledTriangle tri3 = new RightAngledTriangle("Triangle 3", 0, 0, 0, 0);
+        // triangle 4 strictly for negative tests
+        RightAngledTriangle tri4 = new RightAngledTriangle("Triangle 4", -1, -1, -1, -1);
 
         // perimeter tests
         assertEquals(3, tri.perimeter(), 0.1);
         assertEquals(40, tri2.perimeter(), 0.1);
         assertEquals(0, tri3.perimeter(), 0.1);
+        // negative test fails: returns -1
+        assertEquals(-1, tri4.perimeter(), 0.1);
 
         // area tests
         assertEquals(0.5, tri.area(), 0.1);
         assertEquals(25, tri2.area(), 0.1);
         assertEquals(0, tri3.area(), 0.1);
+        // negative test fails: returns -1
+        assertEquals(-1, tri4.area(), 0.1);
 
         // toString tests
         assertEquals("Name: Triangle 1\nBase: 1.0 units\nHeight: 1.0 units\nHyp: 1.0 units\nAdj: 1.0 units", tri.toString());
