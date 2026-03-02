@@ -82,17 +82,18 @@ public class ShapeTest {
         Rhombus rhom4 = new Rhombus("Rhombus 4", -1, -1, -1);
 
         // perimeter tests
-        // A = pi
-        assertEquals(4, rhom.perimeter(), 0.1);
-        assertEquals(80, rhom2.perimeter(), 0.1);
-        assertEquals(0, rhom3.perimeter(), 0.1);
+        // P = 4 * sideLength
+        assertEquals(4 * 1, rhom.perimeter(), 0.1);
+        assertEquals(4 * 20, rhom2.perimeter(), 0.1);
+        assertEquals(4 * 0, rhom3.perimeter(), 0.1);
         // negative test fails: returns -1
         assertEquals(-1, rhom4.perimeter(), 0.1);
 
         // area tests
-        assertEquals(0.5, rhom.area(), 0.1);
-        assertEquals(600, rhom2.area(), 0.1);
-        assertEquals(0, rhom3.area(), 0.1);
+        // A = 0.5 * diagonalOne * DiagonalTwo
+        assertEquals(0.5 * 1 * 1, rhom.area(), 0.1);
+        assertEquals(0.5 * 30 * 40, rhom2.area(), 0.1);
+        assertEquals(0.5 * 0 * 0, rhom3.area(), 0.1);
         // negative test fails: returns -1
         assertEquals(-1, rhom4.area(), 0.1);
 
